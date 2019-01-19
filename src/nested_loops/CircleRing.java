@@ -17,10 +17,11 @@ public class CircleRing {
     	robot.setY(200);
     	
         // 3. Put the robot's pen down
+    	robot.setRandomPenColor();
     	robot.penDown(); 
     	
         // 4. Set the robot’s speed to 10
-    	robot.setSpeed(100);
+    	robot.setSpeed(1000);
     	
         // 5. Do everything below here 360 times (use i as the counter)
     	for(int i=0; i<360; i++) {

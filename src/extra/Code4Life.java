@@ -11,18 +11,35 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JApplet;
+import javax.swing.JOptionPane;
 
 public class Code4Life {
+	public static void main(String[] args) {
 
-	// 1. Ask the user how many hours they spent coding this week.
+		// 1. Ask the user how many hours they spent coding this week.
+		String CodeNinja = JOptionPane.showInputDialog("How many hours this week did you spend coding?");
 
-	// 2. If it is less than or equal to 2, tell them to stop watching YouTube and
-	// write code instead.
+		// 2. If it is less than or equal to 2, tell them to stop watching YouTube and
+		// write code instead.
+		int code = Integer.parseInt(CodeNinja);
+		if (code <= 2) {
+			JOptionPane.showMessageDialog(null,"Stop watching YouTube and write code instead!");
+		
+		}
 
-	// 3. If it is greater than or equal to 3 AND less than or equal to 5, tell them
-	// they're a Code Ninja
+		// 3. If it is greater than or equal to 3 AND less than or equal to 5, tell them
+		// they're a Code Ninja
+		if (code >= 3 && code <=5) {
+			JOptionPane.showMessageDialog(null,"You are a code NINJA!");
+		
+		}
 
-	// 4. If it is more than 5, call the method below to play the Batman theme song.
+		// 4. If it is more than 5, call the method below to play the Batman theme song.
+		if (code > 5) {
+			playBatmanTheme();
+		}
+		}
+	
 
 	private static void playBatmanTheme() {
 		try {
