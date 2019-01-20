@@ -10,24 +10,26 @@ public class EvilPolygonsChallenge {
 
 	public static void main(String[] args) {
 
+		
+		
 		// 1. Create a new Robot
 		Robot robot = new Robot();
 		
 
 		// 2. Set the speed to 100
-		robot.setSpeed(1000);
+		robot.setSpeed(50);
 		int colorChoice = JOptionPane.showOptionDialog(null, "hello", "title", JOptionPane.INFORMATION_MESSAGE,
-				JOptionPane.DEFAULT_OPTION, null, new String[] { "cyan", "red", "green" }, 0);
+				JOptionPane.DEFAULT_OPTION, null, new String[] { "Black", "Cyan", "Magenta" }, 0);
 		
 		if (colorChoice==0){
-			robot.setPenColor(Color.CYAN);
+			robot.setPenColor(Color.BLACK);
 		}
 		if (colorChoice==1) {
-			robot.setPenColor(Color.RED);
+			robot.setPenColor(Color.CYAN);
 		}
 		
 		if (colorChoice==2) {
-			robot.setPenColor(Color.green);
+			robot.setPenColor(Color.MAGENTA);
 		}
 		
 		
@@ -41,7 +43,8 @@ public class EvilPolygonsChallenge {
 		int num = Integer.parseInt(number);
 
 		// 5. Use the robot to draw the number of polygons the user requested.
-		for (int i=0; i<num; i++) {
+		for (int i=0; i<num; i++) { 
+		
 		robot.move(100);
 		robot.turn(90);
 		robot.move(100);
@@ -54,20 +57,20 @@ public class EvilPolygonsChallenge {
 		robot.turn(25);
 		robot.penDown();
 		
-		robot.setPenColor(Color.BLACK);
-		robot.move(100);
-		robot.turn(-90);
-		robot.move(100);
-		robot.turn(-90);
-		robot.move(100);
-		robot.turn(-90);
-		robot.move(100);
+		robot.move(47);
+		robot.turn(67);
+		robot.move(92);
+		robot.turn(125);
+		robot.move(60);
+		robot.turn(62);
+		robot.move(225);
 		robot.penUp();
-		robot.move(20);
-		robot.turn(25);
+		robot.move(127);
+		robot.turn(-25);
 		robot.penDown();
 		
 		
+	}
 		
 		}
 		
@@ -76,5 +79,5 @@ public class EvilPolygonsChallenge {
 	// 6. Make it so your shapes do not overlap
 
 	// 7. Challenge: add more colors to the Option Dialog.
-}
+
 
